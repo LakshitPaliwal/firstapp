@@ -46,7 +46,8 @@ return (
         <Container boxShadow={2} className={classes.root} > 
            <Carousel infiniteLoop={true}  showArrows={false} showThumbs={false} autoPlay >
            {/* axis="vertical" */}
-                <div>
+           <Link  to="About">
+  <div>
                     {/* <img alt="" src="https://life.spartan.com/wp-content/uploads/2019/07/leanmuscleworkout-main-1200x500.jpg" /> */}
                     <img src={slideImage1}/>
                     <div className={classes.mainFeaturedPostContent} style={{
@@ -74,7 +75,7 @@ return (
                         </Link>  
                     </div>
                 </div>
-
+</Link>
                 <div>
                     <img src={slideImage2} />
                     <div className={classes.mainFeaturedPostContent} style={{
