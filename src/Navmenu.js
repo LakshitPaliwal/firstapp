@@ -29,6 +29,7 @@ class Navmenu extends Component {
           <Link className="tabColor appLink" to="Contact"><Tab label="Contact" /></Link>
           <Link className="tabColor appLink" to="About">  <Tab label="About" /></Link>
           <Link className="tabColor appLink" to="SignIn">  <Tab label="SignIn" /></Link>
+          <Link className="tabColor appLink" to="/components/streams/list">  <Tab label="Video Streams" /></Link>
 
         </Tabs>
     </div>
