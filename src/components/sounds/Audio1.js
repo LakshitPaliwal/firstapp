@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
@@ -26,7 +26,7 @@ import Typography from '@material-ui/core/Typography';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#43a047"
+      main: "#43a048"
     },
     secondary: {
       main: "#ff5722"
@@ -52,13 +52,22 @@ export default function Audio1() {
   const trashAudio = new Audio(trash);
   const slideAudio = new Audio(slide);
 
-  const playSound = audioFile => {
+   function playSound (audioFile) {
     audioFile.play();
   };
 
-  const [state, setState] = React.useState({
-    checked: true
-  });
+
+  const [state, setState]   = useState({ checked: true });
+  
+  const [count, setCounter] = useState(0);
+  
+   function updateCounter () {
+        setCounter(count + 1);
+    };
+  
+  function resetCounter () {
+        setCounter(count -1);
+    };
 
   const toggleSwitch = name => event => {
     if (event.target.checked) {
@@ -76,30 +85,37 @@ export default function Audio1() {
       <div className={classes.root}>
         <div className={classes.container}>
           
-        <Typography variant="h5">
-             Click the Heart Button <br></br> Give like and Keep support to <br></br>Mr. Lakshit Paliwal 
+        <Typography justifyContent="flex-start" variant="h5">
+              Press the Heart Button<br/> 
+             When ever you visit this Web App Please hit the Like Button for
+               Keep supporting to
+              Mr. Lakshit Paliwal <br/><br/>
+              <b>You give {count} Like to Lakshit Paliwal</b>
+              
             </Typography>
             <Button
             variant="contained"
             color="primary"
-            onClick={() => playSound(likeAudio)}
-          >
-            
+            onClick={()=>{ updateCounter();playSound(likeAudio);}}
+          ><b>{count}</b>
             <Favorite />
           </Button>
         </div>
 
         <div className={classes.container}>
+        <Typography  justify variant="h5">
+            Delete button is for give chance to improve me more.<br/> 
+            </Typography>
           <Button
             variant="contained"
             color="secondary"
-            onClick={() => playSound(trashAudio)}
+            onClick={()=>{ resetCounter();playSound(trashAudio);}}
           >
             <DeleteForever />
           </Button>
         </div>
 
-        <div className={classes.container}>
+        {/* <div className={classes.container}>
           <Button
             variant="contained"
             color="primary"
@@ -114,9 +130,10 @@ export default function Audio1() {
           >
             <Camera />
           </Button>
-        </div>
+        </div> */}
 
         <div className={classes.container}>
+          Dark mode is under maintainance
           <Switch checked={state.checked} onChange={toggleSwitch("checked")} />
         </div>
 

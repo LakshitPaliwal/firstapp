@@ -1,27 +1,59 @@
 import React, {Component} from 'react';
 import './App.css';
-import Navmenu from './Navmenu';
+import Navmenu from './Navmenu';import About1 from './About1';
+
 // import Button from '@material-ui/core/Button';
 import VideoStream from './VideoStream';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 
-class About extends Component {
-  render(){
+import Grid from '@material-ui/core/Grid';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}))
+const About=()=> {
+ 
+  const classes = useStyles();
+
+  
       return (
   <div>
       <div className="App">
           <Navmenu/>
-          <h1>About</h1> 
-          <h6>
-              this is my app in reactJS and
-              this is about how to routing and switch the tab. 
-          </h6>
-          <VideoStream/>
-
+          <div className={classes.root}>
+      <Grid container spacing={3}>
         
+        <Grid item xs={6}>
+          <Paper className={classes.paper}><About1/></Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}><About1/></Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}><About1/></Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}><About1/></Paper>
+        </Grid>
+       
+      </Grid>
+    </div>
+
+        <VideoStream/>
+
       </div>
     </div>
   );
-}
+
 }
 
 

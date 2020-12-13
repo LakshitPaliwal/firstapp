@@ -2,6 +2,8 @@
 margin:0;
 padding:0;
 }
+
+
 .App {
   text-align: center;
   
@@ -65,3 +67,28 @@ height: 450px;
   height: 500px;
 }
 
+.toasterror{
+  background-color: #c62828 ;
+  border-color: black;
+  border-radius: 5px;
+  color: #ffffff;
+  max-width: max-content;
+  float: inline-end;
+  margin-left: 80%;
+  margin-right: auto;
+}
+
+.toastmessage{
+  background-color: rgb(129, 243, 101) ;
+  border-color:black;
+  border-radius: 5px;
+  color: #ffffff;
+  max-width: max-content;
+  float: inline-end;
+  margin-left: 80%;
+  margin-right: auto; 
+}
+
+.dragBox{
+  cursor:move;
+}
