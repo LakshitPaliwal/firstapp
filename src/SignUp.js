@@ -4,45 +4,45 @@ import Navmenu from './Navmenu';
 import './App.css';
 import M from 'materialize-css';
 
-// import Avatar from '@material-ui/core/Avatar';
-// import Button from '@material-ui/core/Button';
-// import TextField from '@material-ui/core/TextField';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import Checkbox from '@material-ui/core/Checkbox';
-// import Grid from '@material-ui/core/Grid';
-// import Box from '@material-ui/core/Box';
-// import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-// import Typography from '@material-ui/core/Typography';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Container from '@material-ui/core/Container';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
 
 
-// const useStyles = makeStyles(theme => ({
-//   image: {
-//     backgroundImage: 'url(https://source.unsplash.com/random)',
-//     backgroundRepeat: 'no-repeat',
-//     backgroundColor:
-//       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center',
-//   },
-//   avatar: {
-//     margin: theme.spacing(1),
-//     backgroundColor: theme.palette.secondary.main,
-//   },
-//   form: {
-//     width: '100%', 
-//     marginTop: theme.spacing(3),
-//   },
-//   submit: {
-//     margin: theme.spacing(3, 0, 2),
-//   },
+const useStyles = makeStyles(theme => ({
+  image: {
+    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', 
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
 
-// }));
+}));
 
 const SignUp=()=> {
-  // const classes = useStyles()
+  const classes = useStyles()
 
   const history = useHistory()
   
@@ -67,17 +67,17 @@ const SignUp=()=> {
       })
     })
     .then(res=>res.json())
-    // .then(data=>{
-    //   if(data.error){
-    //     M.toast({html: data.error,classes:"toasterror " })
-    //   }
-    //   else{
-    //     M.toast({html:data.message,classes:"toastmessage " })
-    //     history.push('/')
-    //   }
+    .then(data=>{
+      if(data.error){
+        M.toast({html: data.error,classes:"toasterror " })
+      }
+      else{
+        M.toast({html:data.message,classes:"toastmessage " })
+        history.push('/')
+      }
       
       
-    // })
+    })
   }
 
   
@@ -85,7 +85,7 @@ const SignUp=()=> {
   return (
 <div>
     <Navmenu/> 
-    <h2>Sign Up Form</h2>
+    {/* <h2>Sign Up Form</h2>
     <input required
     type="text"
     placeholder="First Name"
@@ -121,9 +121,9 @@ const SignUp=()=> {
     </button>
         <h5>
           <Link to="/SignIn">Already have an account </Link>
-        </h5>
+        </h5> */}
 
-  {/* <div className={classes.image}>
+  <div className={classes.image}>
     <Container component="main" maxWidth="xs">
       <div >
         <Avatar className={classes.avatar}>
@@ -229,7 +229,7 @@ const SignUp=()=> {
         </form>
       </div>
     </Container> 
-    </div> */}
+    </div>
 
 </div>
   );

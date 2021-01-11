@@ -29,8 +29,8 @@ const About=()=> {
   <div>
       <div className="App">
           <Navmenu/>
-          <div className={classes.root}>
-      <Grid container spacing={3}>
+          {/* <div className={classes.root}>
+      <Grid container spacing={2}>
         
         <Grid item xs={6}>
           <Paper className={classes.paper}><About1/></Paper>
@@ -46,7 +46,7 @@ const About=()=> {
         </Grid>
        
       </Grid>
-    </div>
+    </div> */}
 
         <VideoStream/>
 

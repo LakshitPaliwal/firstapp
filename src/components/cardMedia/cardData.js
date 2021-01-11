@@ -1,6 +1,6 @@
 const cardData = [
     {
-      bText1: 'q11111',
+      bText1: 'qq11111',
       bText2: 'w11111',
       bText3: 'Learn',  
       bText4: 'Learn More',

@@ -17,13 +17,13 @@ const useStyles = makeStyles( (theme)=>({
 
 root  :{ 
   // width:'380px',
-  backgroundColor:'#f4f5f7',
+  // backgroundColor:'#f4f5f7',
   flexGrow: 1,
   marginBottom: theme.spacing(4),
-  margin:'center',
+  // margin:'center',
   borderRadius: '5px',
   boxShadow:'none',
-  transition: 'all 0.3s',
+  // transition: 'all 0.3s',
   '&:hover': {
     backgroundColor:'#ffffff',
     transform: 'scale(1.007)',

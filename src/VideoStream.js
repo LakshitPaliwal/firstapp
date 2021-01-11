@@ -1,21 +1,42 @@
-import React,{Component} from 'react';
-import './App.css';
-import car from './media/allvideos/TayTay.mp4';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+
+import videoData from './videoData';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+   
+    backgroundColor: "#9b5ad0",
+  },
+  gridList: {
+    width: "100%",
+    height: "100%",
+  },
+ 
+}));
 
 
-class VideoStream extends Component{
+const VideoStream=()=> {
+  const classes = useStyles();
 
-    render(){
-        return (
-    <div>
-        <video   width="750" height="500" controls >
-            <source src={car} type="video/mp4"/>
-        </video>
-        
+  return (
+    <div className={classes.root}>
+      <GridList cellHeight={180} className={classes.gridList}>
+       
+        {videoData.map((tilevideo) => (
+    
+            <GridListTile >
+                <iframe src={tilevideo.vid} key={tilevideo.id} frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> 
+            </GridListTile>
+    
+        ))}
+      </GridList>
     </div>
-    );
-  }
-  }
-  
-  
-  export default VideoStream;
+  );
+}
+export default VideoStream;

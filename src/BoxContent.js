@@ -1,4 +1,3 @@
-  
 import React ,{Component} from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
@@ -46,7 +45,7 @@ const BoxContent=(props)=> {
          
         <CardContent border={0}>
           <Typography gutterBottom variant="h6" component="h2">
-                {props.bText1}
+                {props.bText}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
                 {props.bText2}

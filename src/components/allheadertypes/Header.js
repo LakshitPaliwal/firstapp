@@ -6,7 +6,7 @@ import HeaderImage from './HeaderImage';
 const Header = (props) => {
     return(
 <div>
-    <HeaderImage image=" " />
+    <HeaderImage />
 </div>
  );
 }
