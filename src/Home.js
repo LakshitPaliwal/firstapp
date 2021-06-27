@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Navmenu from './Navmenu';
 import Header from './/components/allheadertypes/Header';
 import HomeCard from './components/cardMedia/HomeCard';
 import HomeVideo from './components/homevid/HomeVideo';
@@ -16,7 +15,6 @@ const Home =(props)=> {
       return (
       <div className="App" >
       <div id="back-to-top-anchor" />
-      <Navmenu/>
           <Header/>
          {/* <Container style={{ backgroundColor: '#cfe8fc', height: '10',width:'50' }}>
               <h4>this is home page and made with react js </h4><br></br>

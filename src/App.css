@@ -3,11 +3,23 @@ margin:0;
 padding:0;
 }
 
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #3F3F3F;
+  --text-color: #fff;
+}
 
 .App {
-  text-align: center;
-  
+  font-family: sans-serif;  
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
+
+
 
 .appLink {
   text-decoration: none;

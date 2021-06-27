@@ -13,7 +13,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 import {Link} from 'react-router-dom';
-import Navmenu from './Navmenu';
 import SignUp from './SignUp';
 import Index from './IndexComp/Index';
 
@@ -77,7 +76,6 @@ export default function SignInSide() {
 
   return (
 <div>
-    <Navmenu/>
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />

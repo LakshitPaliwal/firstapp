@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Link,useHistory} from 'react-router-dom';
-import Navmenu from './Navmenu';
 import './App.css';
 import M from 'materialize-css';
 
@@ -84,7 +83,6 @@ const SignUp=()=> {
 
   return (
 <div>
-    <Navmenu/> 
     {/* <h2>Sign Up Form</h2>
     <input required
     type="text"
