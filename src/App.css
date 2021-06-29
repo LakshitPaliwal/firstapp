@@ -1,0 +1,115 @@
+*{
+margin:0;
+padding:0;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #3F3F3F;
+  /* --bg-color: #000000; */
+  --text-color: #fff;
+
+}
+
+.App {
+  font-family: sans-serif;  
+  background-color: var(--bg-color);
+  text-align: center;
+  color: var(--text-color);
+}
+.switchBtn{
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.marginRightAuto{
+  margin-left: auto;
+}
+.appLink {
+  text-decoration: none;
+}
+.tabColor{
+  background-color:#282c34;
+  color:#ffffff;
+  padding: 2.5px 5px;
+
+}
+.homeIcon{
+margin:12px;
+}
+.navStyle ul{
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.navStyle ul li{
+  list-style: none;
+  text-align: justify;
+}
+
+/*{
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.imgSlider{
+height: 450px;
+}
+
+.containerSlide {
+  width: 650px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.containerSlide img {
+  height: 500px;
+}
+
+.toasterror{
+  background-color: #c62828 ;
+  border-color: black;
+  border-radius: 5px;
+  color: #ffffff;
+  max-width: max-content;
+  float: inline-end;
+  margin-left: 80%;
+  margin-right: auto;
+}
+
+.toastmessage{
+  background-color: rgb(129, 243, 101) ;
+  border-color:black;
+  border-radius: 5px;
+  color: #ffffff;
+  max-width: max-content;
+  float: inline-end;
+  margin-left: 80%;
+  margin-right: auto; 
+}
+
+.dragBox{
+  cursor:move;
+}
