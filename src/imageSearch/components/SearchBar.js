@@ -34,8 +34,8 @@ const theme = createMuiTheme({
             <AppBar  position="static">
               <Toolbar>
                 <Typography variant="h6" Wrap>
-                    Search Here Any Thing 
-                      <ArrowForwardIcon/>
+                    Search Here Any Thing &nbsp;
+                      {/* <ArrowForwardIcon/> */}
                 </Typography>  
                 <SearchIcon /> 
                   {/* <TextField id="standard-search" label="Search field" type="search" />  */}

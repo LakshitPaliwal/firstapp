@@ -32,6 +32,12 @@ padding:0;
 }
 .appLink {
   text-decoration: none;
+  color: #000;
+  color: var(--text-color);
+
+}
+.appLink:hover {
+text-decoration: none;
 }
 .tabColor{
   background-color:#282c34;

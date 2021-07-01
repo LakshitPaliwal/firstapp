@@ -5,6 +5,7 @@ import {createStore, applyMiddleware,compose} from 'redux';
 
 import App from './App';
 import reducers from './components/reducers'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
