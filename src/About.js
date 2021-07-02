@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Navmenu from './Navmenu';import About1 from './About1';
+import About1 from './About1';
 
 // import Button from '@material-ui/core/Button';
 import VideoStream from './VideoStream';
@@ -28,7 +28,6 @@ const About=()=> {
       return (
   <div>
       <div className="App">
-          <Navmenu/>
           {/* <div className={classes.root}>
       <Grid container spacing={2}>
         

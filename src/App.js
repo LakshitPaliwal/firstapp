@@ -6,6 +6,10 @@ import Contact from './Contact';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 
+import SwitchBtn from "@material-ui/core/Switch";
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
+
 import HappyUser from './HappyUser';
 
 import StreamList from './components/streams/StreamList';
@@ -34,10 +38,13 @@ function App() {
 
     <BrowserRouter>
       <div className="App" data-theme={darkMode ? "dark" : "light"}>
-        <button onClick={toggleDarkMode}>
-          Toggle Dark Mode
-        </button>
         <Navmenu />
+
+        <div className="switchBtn ">
+          <NightsStayIcon />
+          <SwitchBtn onClick={toggleDarkMode} />
+          <WbSunnyIcon mt={2} />
+        </div>
 
         <Switch>
           <Route path="/" exact component={Home} />

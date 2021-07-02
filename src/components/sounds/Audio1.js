@@ -132,10 +132,10 @@ export default function Audio1() {
           </Button>
         </div> */}
 
-        <div className={classes.container}>
+        {/* <div className={classes.container}>
           Dark mode is under maintainance
           <Switch checked={state.checked} onChange={toggleSwitch("checked")} />
-        </div>
+        </div> */}
 
         <div className={classes.container}>
           <Slider
